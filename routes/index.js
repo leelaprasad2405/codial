@@ -5,6 +5,12 @@ const homeController = require('../controllers/home_controller');
 console.log('router loaded');  //written just for understanding that this file got loaded by looking at this message
 
 router.get('/', homeController.home);
+router.use('/users', require('./users'));
+
+/* for any furthur routesaccess as below
+   router.use('/routerName', require('./routerfile'));
+*/
+
 module.exports = router;
 
 
