@@ -10,7 +10,7 @@ const session = require('express-session');
 const passport = require('passport');
 const passportLocal = require('./config/passport-local-strategy');
 const MongoStore = require('connect-mongo');
-//const sassMiddleware = require('s')***********************
+//const sassM = require('s')***********************
 
 app.use(express.urlencoded()); // to read the posts
 app.use(cookieParser());  // setting the cookie parser
