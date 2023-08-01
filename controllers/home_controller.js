@@ -23,7 +23,15 @@ module.exports.home = function(req, res){
 
 
    // from cg for above
-    Post.find({}).populate('user').exec()
+    Post.find({})
+    .populate('user')
+    .populate({
+        path: 'comments',
+        populate: {
+            path: 'user'
+        }
+    })
+    .exec()
     .then(posts => {
         return res.render('home', {
             title: "Codial | Home",

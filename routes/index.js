@@ -7,6 +7,7 @@ console.log('router loaded');  //written just for understanding that this file g
 router.get('/', homeController.home);
 router.use('/users', require('./users'));
 router.use('/posts', require('./posts'));
+router.use('/comments', require('./comments'));
 
 /* for any furthur routesaccess as below
    router.use('/routerName', require('./routerfile'));
